@@ -1,0 +1,42 @@
+{
+  "$id": "https://raw.github.com/flangrys/infrastructure-services-portal/master/docs/manifest.schema.json",
+  "title": "Server configuration manifest",
+  "description": "A little masive manifest file that declares a huge configurations specifics",
+  "type": "object",
+  "default": null,
+  "properties": {
+    "app_name": {
+      "type": "string",
+      "description": "The server's name",
+      "default": "ISP"
+    },
+    "app_version": {
+      "type": "string",
+      "description": "The server's development version.",
+      "default": "v0.1.0-rc"
+    },
+    "app_environs": {
+      "type": "array",
+      "description": "An array of key-value objects that stores the environment values used by the system.",
+      "default": null,
+      "items": {
+        "type": "object",
+        "description": "",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "The key of the environment variable",
+            "default": null
+          },
+          "value": {
+            "type": "string",
+            "description": "The value of the environment variable",
+            "default": null
+          }
+        }
+      }
+    }
+  },
+
+  "required": []
+}
